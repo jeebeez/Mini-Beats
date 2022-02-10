@@ -22,11 +22,11 @@ yarn start
 
 ## Features
 
-• User can select from multiple sounds for each instrument.
-• User can increase and decrease the BPM (beats per minute) using the
+- User can select from multiple sounds for each instrument.
+- User can increase and decrease the BPM (beats per minute) using the
 Tempo Slider to create various beats patterns.
-• Used React Hooks for Context and State Management.
-• Currently working on saving beat patterns which can be used to replay
+- Used React Hooks for Context and State Management.
+- Currently working on saving beat patterns which can be used to replay
 previously created beats
 
 ## External Libraries
