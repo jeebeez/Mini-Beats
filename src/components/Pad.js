@@ -14,8 +14,6 @@ const Pad = ({ padType, index }) => {
 
   const padValue = useRef("soundCard");
 
-  console.log("Pad value");
-
   const togglePad = (padActive) => {
     if (padActive) {
       setPadActive(0);

@@ -31,12 +31,10 @@ const Player = () => {
   const repeat = () => {
     const step = index % 15;
     const activeBars = document.querySelectorAll(`.b-${step}`);
-    console.log(activeBars);
-    console.log("Reached here repeat isPlaying", isPlaying);
+
 
     // Loop over the pads
     activeBars.forEach((bar) => {
-      bar.style.animation = `playTrack 0.3s alternate ease-in-out 2`;
       if (bar.classList.contains("pad_active")) {
         if (bar.classList.contains("kick-pad")) {
           kickAudioSound.currentTime = 0;
@@ -57,12 +55,6 @@ const Player = () => {
 
   const start = () => {
     const interval = (60 / bpm) * 1000;
-    console.log("Bpm", bpm);
-
-    //Check if it's playing
-    console.log("Reached here start isPlaying", isPlaying);
-
-    console.log("Reached here else isPlaying", isPlaying);
 
     // clearInterval(isPlaying);
     // setIsPlaying(null);
@@ -82,7 +74,6 @@ const Player = () => {
 
   const stop = () => {
     clearInterval(isPlaying);
-    // console.log(isPlaying);
     setIsPlaying(null);
   };
 
@@ -99,7 +90,6 @@ const Player = () => {
 
   useEffect(() => {
     kickAudioSound.src = kickAudio;
-    console.log(kickAudioSound);
     snareAudioSound.src = snareAudio;
     hihatAudioSound.src = hihatAudio;
   }, [
@@ -156,7 +146,7 @@ const Player = () => {
           }}
           disabled={isPlaying}
         >
-          {"Play"}
+          Play
         </button>
         <button
           className="play stop"
@@ -166,7 +156,7 @@ const Player = () => {
           }}
           disabled={!isPlaying}
         >
-          {"Stop"}
+          Stop
         </button>
       </div>
       <div className="tempo">
